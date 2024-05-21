@@ -91,7 +91,7 @@ section .title::after{
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: #6e6e6e;
+    background: #000000;
 }
 .navbar .max-width{
     display: flex;
@@ -123,7 +123,7 @@ section .title::after{
     transition: color 0.3s ease;
 }
 .navbar .menu li a:hover{
-    color: #6e6e6e;
+    color: #000000;
 }
 .navbar.sticky .menu li a:hover{
     color: #fff;
@@ -218,7 +218,7 @@ section .title::after{
 
 /* about section styling */
 .about .title::after{
-    content: "who we are";
+    content: "I hope it will be interesting";
 }
 .about .about-content .left{
     width: 45%;
@@ -272,7 +272,7 @@ section .title::after{
 .services .title::after,
 .teams .title::after{
     background: #111;
-    content: "what we do";
+    content: "what I do";
 }
 .services .serv-content .card{
     width: calc(33% - 20px);
@@ -369,10 +369,10 @@ section .title::after{
     width: 90%;
 }
 .skills-content .right .css::before{
-    width: 60%;
+    width: 80%;
 }
 .skills-content .right .js::before{
-    width: 50%;
+    width: 70%;
 }
 .skills-content .right .php::before{
     width: 70%;
@@ -382,8 +382,9 @@ section .title::after{
 }
 
 /* teams section styling */
+
 .teams .title::after{
-    content: "who with me";
+    content: "I worked for few Organizations";
 }
 .teams .carousel .card{
     background: #222;
@@ -396,10 +397,19 @@ section .title::after{
 .teams .carousel .card:hover{
     background: #6e6e6e;
 }
-.teams .carousel .card .box{
+.expbox{
+    background: #b90404;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.expbox2{
+    background: #170557;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
     justify-content: center;
     transition: all 0.3s ease;
 }
