@@ -1,74 +1,65 @@
-$(document).ready(function(){
-    $(window).scroll(function(){
-        // sticky navbar on scroll script
-        if(this.scrollY > 20){
-            $('.navbar').addClass("sticky");
-        }else{
-            $('.navbar').removeClass("sticky");
+document.addEventListener('DOMContentLoaded', () => {
+    const nameElement = document.getElementById('name');
+    const rolesElement = document.getElementById('roles');
+    const name = 'Niranjan Gopalan';
+    const roles = ['Software Engineer', 'Consultant', 'Data Analyst', 'Full-Stack Developer'];
+
+    // Typing effect for name
+    let i = 0;
+    const typeWriter = () => {
+        if (i < name.length) {
+            nameElement.innerHTML += name.charAt(i);
+            i++;
+            setTimeout(typeWriter, 100);
+        } else {
+            setTimeout(typeRoles, 1000);
         }
+    };
 
-        // scroll-up button show/hide script
-        if(this.scrollY > 500){
-            $('.scroll-up-btn').addClass("show");
-        }else{
-            $('.scroll-up-btn').removeClass("show");
+    // Typing effect for roles
+    let j = 0;
+    let currentRole = 0;
+    const typeRoles = () => {
+        if (j < roles[currentRole].length) {
+            rolesElement.innerHTML += roles[currentRole].charAt(j);
+            j++;
+            setTimeout(typeRoles, 100);
+        } else {
+            setTimeout(() => {
+                eraseRole();
+            }, 1000);
         }
-    });
+    };
 
-    // slide-up script
-    $('.scroll-up-btn').click(function(){
-        $('html').animate({scrollTop: 0});
-        // removing smooth scroll on slide-up button click
-        $('html').css("scrollBehavior", "auto");
-    });
-
-    $('.navbar .menu li a').click(function(){
-        // applying again smooth scroll on menu items click
-        $('html').css("scrollBehavior", "smooth");
-    });
-
-    // toggle menu/navbar script
-    $('.menu-btn').click(function(){
-        $('.navbar .menu').toggleClass("active");
-        $('.menu-btn i').toggleClass("active");
-    });
-
-    // typing text animation script
-    var typed = new Typed(".typing", {
-        strings: ["Software Engineer", "Data Engineer and analyst", "Business Consultant", "Historian too !"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
-
-    var typed = new Typed(".typing-2", {
-        strings: ["Software Engineer", "Data Engineer and analyst", "Business Consultant", "Historian too !"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
-
-    // owl carousel script
-    $('.carousel').owlCarousel({
-        strings: ["Software Engineer", "Data Engineer and analyst", "Business Consultant", "Historian too !"],
-        margin: 20,
-        loop: true,
-        autoplay: true,
-        autoplayTimeOut: 2000,
-        autoplayHoverPause: true,
-        responsive: {
-            0:{
-                items: 1,
-                nav: false
-            },
-            600:{
-                items: 2,
-                nav: false
-            },
-            1000:{
-                items: 3,
-                nav: false
-            }
+    const eraseRole = () => {
+        if (rolesElement.innerHTML.length > 0) {
+            rolesElement.innerHTML = rolesElement.innerHTML.slice(0, -1);
+            setTimeout(eraseRole, 50);
+        } else {
+            currentRole = (currentRole + 1) % roles.length;
+            j = 0;
+            setTimeout(typeRoles, 500);
         }
+    };
+
+    typeWriter();
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        menuToggle.classList.toggle('active');
     });
 });
