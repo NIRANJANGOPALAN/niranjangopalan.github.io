@@ -18,6 +18,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
+  margin: 0;
 }
 
 .container {
@@ -36,6 +37,7 @@ header {
     top: 0;
     z-index: 1000;
     color: white;
+    height: 60px;
 }
 
 
@@ -71,7 +73,7 @@ nav ul li a:hover {
 }
 
 main {
-    padding-top: 80px;
+    padding-top: 0px;
 }
 
 section {
@@ -92,6 +94,7 @@ h2 {
     color: var(--white);
     text-align: center;
     padding: 8rem 0;
+    margin-top: 60px;
 }
 
 .hero h2 {
@@ -107,8 +110,8 @@ h2 {
 
 .cta-button {
     display: inline-block;
-    background-color: var(--accent-color);
-    color: var(--white);
+    background-color: darkblue;
+    color: #FFD700;;
     padding: 0.8rem 2rem;
     text-decoration: none;
     border-radius: 5px;
@@ -116,7 +119,10 @@ h2 {
 }
 
 .cta-button:hover {
-    background-color: var(--secondary-color);
+    background-color: #FFD700;;
+    color: darkblue;
+    border-style: solid;
+   
 }
 
 .timeline {
@@ -168,13 +174,94 @@ h2 {
     left: -16px;
 }
 
-.education-item, .project-item {
+ .project-item {
     background-color: var(--white);
     padding: 2rem;
     margin-bottom: 2rem;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+.education-item1, .education-item2 {
+    position: relative;
+    background-color: #ffffff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.education-item1::after, .education-item2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    transform: skew(-15deg);
+    transform-origin: top right;
+}
+
+/* England flag for MS degree */
+.education-item1::after {
+    background-color: #ffffff;
+    background-image: 
+        linear-gradient(to right, transparent calc(50% - 5px), #CE1124 calc(50% - 5px), #CE1124 calc(50% + 5px), transparent calc(50% + 5px)),
+        linear-gradient(to bottom, transparent calc(50% - 5px), #CE1124 calc(50% - 5px), #CE1124 calc(50% + 5px), transparent calc(50% + 5px));
+    background-size: 100% 100%, 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center, center center;
+}
+
+/* India flag colors for BE degree */
+.education-item2::after {
+    background: linear-gradient(
+        to bottom,
+        #FF9933 33.33%,
+        #ffffff 33.33%, #ffffff 66.66%,
+        #138808 66.66%
+    );
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 0.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .education-item1, .education-item2 {
+        padding-right: 35%;
+    }
+    
+    .education-item1::after, .education-item2::after {
+        width: 25%;
+    }
+}
+
+@media (max-width: 480px) {
+    .education-item1, .education-item2 {
+        padding-right: 30%;
+    }
+    
+    .education-item1::after, .education-item2::after {
+        width: 20%;
+    }
+}
+
+
+
+
+
+
 
 .skills-grid, .project-grid {
     display: grid;
