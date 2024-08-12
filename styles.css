@@ -199,29 +199,21 @@ h2 {
     right: 0;
     bottom: 0;
     width: 30%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     transform: skew(-15deg);
     transform-origin: top right;
 }
 
 /* England flag for MS degree */
 .education-item1::after {
-    background-color: #ffffff;
-    background-image: 
-        linear-gradient(to right, transparent calc(50% - 5px), #CE1124 calc(50% - 5px), #CE1124 calc(50% + 5px), transparent calc(50% + 5px)),
-        linear-gradient(to bottom, transparent calc(50% - 5px), #CE1124 calc(50% - 5px), #CE1124 calc(50% + 5px), transparent calc(50% + 5px));
-    background-size: 100% 100%, 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center center, center center;
+    background-image: url('Assets/Flag_of_England.png'); /* Replace with the actual path to the England flag image */
 }
 
-/* India flag colors for BE degree */
+/* India flag for BE degree */
 .education-item2::after {
-    background: linear-gradient(
-        to bottom,
-        #FF9933 33.33%,
-        #ffffff 33.33%, #ffffff 66.66%,
-        #138808 66.66%
-    );
+    background-image: url('Assets/Flag_of_India.svg'); /* Replace with the actual path to the India flag image */
 }
 
 h2 {
@@ -236,24 +228,45 @@ p {
     margin-bottom: 0.25rem;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .education-item1, .education-item2 {
-        padding-right: 35%;
-    }
-    
-    .education-item1::after, .education-item2::after {
-        width: 25%;
-    }
+.education-item1, .education-item2 {
+    position: relative;
+    background-color: #ffffff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
-@media (max-width: 480px) {
-    .education-item1, .education-item2 {
-        padding-right: 30%;
-    }
-    
-    .education-item1::after, .education-item2::after {
-        width: 20%;
+.education-item1::after, .education-item2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: skew(-15deg);
+    transform-origin: top right;
+}
+
+/* England flag for MS degree */
+.education-item1::after {
+    background-image: url('Assets/Flag_of_England.png'); /* Replace with the actual path to the England flag image */
+}
+
+/* India flag for BE degree */
+.education-item2::after {
+    background-image: url('Assets/Flag_of_India.svg'); /* Replace with the actual path to the India flag image */
+}
+
+/* Media query to hide flags on mobile devices */
+@media (max-width: 768px) {
+    .education-item1::after,
+    .education-item2::after {
+        display: none; /* Hide the flags on screens smaller than 768px */
     }
 }
 
@@ -360,4 +373,23 @@ footer {
     .timeline-item:nth-child(even) {
         left: 0%;
     }
+}
+
+.pdf-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Set a maximum width */
+    height: 0;
+    padding-bottom: 62.5%; /* Aspect ratio: 16:10 */
+    margin: 0 auto; /* Center the container */
+    overflow: hidden;
+}
+
+.pdf-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Optional: Remove border */
 }
