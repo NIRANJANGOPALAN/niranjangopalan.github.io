@@ -44,7 +44,7 @@ header {
 
 .menu-toggle {
     display: none;
-    background: none;
+    background: blue;
     border: none;
     color: var(--white);
     font-size: 1.5rem;
@@ -328,6 +328,7 @@ footer {
 @media screen and (max-width: 768px) {
     .menu-toggle {
         display: block;
+        background-color: #002395;
     }
 
     nav {
@@ -337,6 +338,7 @@ footer {
 
     nav.active {
         display: block;
+        background-color: #002395;
     }
 
     nav ul {

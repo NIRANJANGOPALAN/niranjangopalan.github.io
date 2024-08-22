@@ -63,3 +63,20 @@ document.addEventListener('DOMContentLoaded', () => {
         menuToggle.classList.toggle('active');
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    const menuItems = document.querySelectorAll('nav ul li a'); // Select all menu items
+
+    // Toggle the navigation menu when the menu toggle button is clicked
+    menuToggle.addEventListener('click', function() {
+        nav.classList.toggle('active');
+    });
+
+    // Close the menu when a menu item is clicked
+    menuItems.forEach(item => {
+        item.addEventListener('click', function() {
+            nav.classList.remove('active'); // Remove the active class to hide the menu
+        });
+    });
+});
