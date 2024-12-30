@@ -27,6 +27,11 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
+.mainMenu{
+    align-items: center;
+    justify-content: center;
+
+}
 
 header {
     background-color: var(--primary-color);
@@ -125,10 +130,15 @@ h2 {
    
 }
 
+.experience{
+    background-color: var(--gold);
+}
+
 .timeline {
     position: relative;
     max-width: 800px;
     margin: 0 auto;
+    
 }
 
 .timeline::after {
@@ -145,7 +155,7 @@ h2 {
 .timeline-item {
     padding: 10px 40px;
     position: relative;
-    background-color: var(--gold);
+    background-color: var(--bg-color);
     width: 50%;
 }
 
