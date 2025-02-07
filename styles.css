@@ -131,7 +131,7 @@ h2 {
 }
 
 .experience{
-    background-color: var(--gold);
+    background-color: var(--bg-color);
 }
 
 .timeline {
@@ -155,7 +155,7 @@ h2 {
 .timeline-item {
     padding: 10px 40px;
     position: relative;
-    background-color: var(--bg-color);
+    background-color: var(--gold);
     width: 50%;
 }
 
