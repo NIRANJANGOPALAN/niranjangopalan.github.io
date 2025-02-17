@@ -155,7 +155,7 @@ h2 {
 .timeline-item {
     padding: 10px 40px;
     position: relative;
-    background-color: var(--gold);
+    /* background-color: var(--gold); */
     width: 50%;
 }
 
@@ -212,7 +212,7 @@ h2 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transform: skew(-15deg);
+    /* transform: skew(-85deg); */
     transform-origin: top right;
 }
 
@@ -258,7 +258,7 @@ p {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transform: skew(-15deg);
+    /* transform: skew(-15deg); */
     transform-origin: top right;
 }
 
