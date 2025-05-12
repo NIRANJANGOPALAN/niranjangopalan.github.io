@@ -286,20 +286,20 @@ p {
 
 
 
-.skills-grid, .project-grid {
+.skills-grid, .project-grid, .research-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
 }
 
-.skill-category, .project-item {
+.skill-category, .project-item, .research-item {
     background-color: var(--gold);
     padding: 1.5rem;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.skill-category h3, .project-item h3 {
+.skill-category h3, .project-item h3, .research-item h3 {
     color: var(--secondary-color);
     margin-bottom: 1rem;
 }
@@ -310,6 +310,191 @@ p {
 
 .skill-category ul li {
     margin-bottom: 0.5rem;
+}
+
+.bento-item ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.bento-item ul li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.bento-item ul li:before {
+    content: "•";
+    color: var(--secondary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -16px;
+}
+
+ .project-item {
+    background-color: var(--white);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.education-item1, .education-item2 {
+    position: relative;
+    background-color: #ffffff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.education-item1::after, .education-item2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* transform: skew(-15deg); */
+    transform-origin: top right;
+}
+
+/* England flag for MS degree */
+.education-item1::after {
+    background-image: url('Assets/Flag_of_England.png'); /* Replace with the actual path to the England flag image */
+}
+
+/* India flag for BE degree */
+.education-item2::after {
+    background-image: url('Assets/Flag_of_India.svg'); /* Replace with the actual path to the India flag image */
+}
+
+/* Media query to hide flags on mobile devices */
+@media (max-width: 768px) {
+    .education-item1::after,
+    .education-item2::after {
+        display: none; /* Hide the flags on screens smaller than 768px */
+    }
+}
+
+
+
+
+
+
+
+.skills-grid, .project-grid, .research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category, .project-item, .research-item {
+    background-color: var(--gold);
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category h3, .project-item h3, .research-item h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.skill-category ul {
+    list-style-type: none;
+}
+
+.skill-category ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Bento Grid Styles */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.bento-item {
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.bento-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.bento-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.bento-item p {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.bento-item .know-more {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.bento-item .know-more:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Different heights for visual interest */
+.bento-item:nth-child(odd) {
+    min-height: 280px;
+}
+
+.bento-item:nth-child(even) {
+    min-height: 300px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .bento-item:nth-child(odd),
+    .bento-item:nth-child(even) {
+        min-height: auto;
+    }
 }
 
 footer {
