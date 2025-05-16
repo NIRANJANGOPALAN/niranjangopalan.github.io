@@ -4,260 +4,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Niranjan Gopalan's Portfolio</title>
-    <link rel="icon" type="image/png" href="Assets\NJ.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap"
-        rel="stylesheet">
+    <title>Niranjan Gopalan</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2C4PDXJ4YC"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-2C4PDXJ4YC');
-    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <button class="menu-toggle" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav>
-                <ul class="mainMenu">
-                    <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-                    <!-- Removed experience link from navigation menu -->
-                    <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
-                    <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
-                    <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
-                    <li><a href="#research"><i class="fa-solid fa-book"></i> Research</a></li>
-                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                </ul>
-            </nav>
+    <header class="header">
+        <div class="logo">Niranjan Gopalan</div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
         </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <h2 ">Hello, I am <span id=" name">Niranjan Gopalan</span></h2>
-                <!-- <p>Data Analyst | Machine Learning Engineer | Full-Stack Developer | Business Consultant | Historian
-                    too!</p> -->
-                <a href="#about" class="cta-button">See more</a>
-            </div>
-            <div class="social-icons">
-                <a href="https://github.com/NIRANJANGOPALAN" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.kaggle.com/niranjan42" target="_blank"><i class="fab fa-kaggle"></i></a>
-                <a href="https://medium.com/@niranjangopalan948" target="_blank"><i class="fab fa-medium"></i></a>
-            </div>
-        </section>
+    <section id="home" class="section">
+        <h1>Hi Internet</h1>
+        <p>I promise my solutions are friendlier than me.</p>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-medium"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </section>
 
-        <section id="about" class="about">
-            <div class="container">
-                <h2><i class="fas fa-user"></i> About Me</h2>
-                <div class="aboutContents">
-                    <h3>Experienced IT professional skilled in data analysis, business analytics, and full-stack
-                        development,
-                        utilizing technical expertise to drive strategic decision-making and optimize business
-                        processes.
-                        Dedicated to delivering innovative, data-driven solutions that align with organizational goals,
-                        while excelling in Agile methodologies and the Software Development Life Cycle to enhance
-                        operational efficiency in dynamic IT environments.</h3>
+    <section id="about" class="section">
+        <h2>About Me: Not Quite James Bond, But I Do Code</h2>
+        <p>Passionate about transforming data into actionable insights, skilled in agile collaboration, experienced in
+            delivering scalable solutions that drive business value, through effective stakeholder engagement and
+            data-driven decision-making.</p>
+    </section>
+
+    <section id="education" class="education section">
+        <h2>Education: Where I Learned to Pretend I Knew What I Was Doing</h2>
+        <div class="education-container">
+            <div class="education-item">
+                <div class="education-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                    <img src="./Assets/Flag_of_England.png" alt="UK Flag" class="flag-img">
                 </div>
-            </div>
-        </section>
-
-        <!-- Experience section removed as requested -->
-
-        <section id="education">
-            <div class="container">
-                <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-                <div class="education-item1">
+                <div class="education-content">
                     <h3>Master of Science in Business Analytics</h3>
-                    <p><i class="fas fa-university"></i> Aston University, Birmingham, England, United Kingdom</p>
-                    <p><i class="fas fa-calendar-alt"></i> September 2023 to September 2024</p>
+                    <p class="institution"><i class="fas fa-university"></i> Aston University, Birmingham, England,
+                        United Kingdom</p>
+                    <p class="duration"><i class="far fa-calendar-alt"></i> September 2023 to September 2024</p>
                 </div>
-                <div class="education-item2">
+            </div>
+
+            <div class="education-item">
+                <div class="education-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                    <img src="./Assets/Flag_of_India.svg" alt="India Flag" class="flag-img">
+                </div>
+                <div class="education-content">
                     <h3>Bachelor of Engineering in Computer Science and Engineering</h3>
-                    <p><i class="fas fa-university"></i> KSR College of Engineering, TN, India</p>
-                    <p><i class="fas fa-calendar-alt"></i> July 2016 to June 2020</p>
+                    <p class="institution"><i class="fas fa-university"></i> Anna University, TN, India</p>
+                    <p class="duration"><i class="far fa-calendar-alt"></i> July 2016 to June 2020</p>
                 </div>
-            </div>
-        </section>
-        
-        <section id="skills">
-            <div class="container">
-                <h2><i class="fas fa-cogs"></i> Skills</h2>
-                <div class="bento-grid">
-                    <div class="bento-item">
-                        <h3>Data Analytics and Machine Learning</h3>
-                        <ul>
-                            <li>Data Analysis</li>
-                            <li>Business Analytics</li>
-                            <li>Data Visualization</li>
-                            <li>Statistical Modeling</li>
-                            <li>Data Wrangling</li>
-                            <li>Data Preprocessing</li>
-                            <li>Feature Engineering</li>
-                            <li>Exploratory Data Analysis</li>
-                            <li>Predictive Modelling</li>
-                            <li>Regression Analysis</li>
-                            <li>Time Series Analysis</li>
-                            <li>Clustering</li>
-                        </ul>
-                    </div>
-            
-                    
-                    <div class="bento-item">
-                        <h3>Programming & Development</h3>
-                        <ul>
-                            <li>Full-Stack Development</li>
-                            <li>UI</li>
-                            <li>JavaScript</li>
-                            <li>React.js</li>
-                            <li>Material UI</li>
-                            <li>Node.js</li>
-                            <li>Next.js</li>
-                            <li>Python</li>
-                            <li>Flask</li>
-                            <li>REST API</li>
-                            <li>GIT</li>
-                            <li>CI/CD</li>
-                            <li>Jenkins</li>
-                            <li>Docker</li>
-                            <li>Microservices</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bento-item">
-                        <h3>Big data, Database and Cloud Platforms</h3>
-                        <ul>
-                            <li>SQL</li>
-                            <li>Apache Spark</li>
-                            <li>Oracle Database</li>
-                            <li>PostgreSQL</li>
-                            <li>AWS S3</li>
-                            <li>Cloudflare R2</li>
-                            <li>AstraDB</li>
-                            <li>ETL</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bento-item">
-                        <h3>Business Intelligence & Visualization Tools</h3>
-                        <ul>
-                            <li>Power BI</li>
-                            <li>IBM SPSS</li>
-                            <li>Looker</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bento-item">
-                        <h3>Project Management & Methodologies</h3>
-                        <ul>
-                            <li>Agile Methodologies</li>
-                            <li>SDLC</li>
-                            <li>Stakeholder Management</li>
-                            <li>Data-Driven Decision Making</li>
-                            <li>UAT</li>
-                            <li>Jira</li>
-                            <li>Digital ai</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects">
-            <div class="container">
-                <h2><i class="fas fa-project-diagram"></i> Key Projects</h2>
-                <div class="project-item">
-                    <h3>Customer Pricing Map, FedEx Corp, USA</h3>
-                    <p>Developed the Customer Pricing Map (CPM) application, providing comprehensive insights into
-                        shipping details and product discounts, facilitating critical decision-making for stakeholders.
-                        This application caters to all FedEx customers by offering multiple data visualization reports
-                        that offer diverse perspectives and comparisons of existing pricing hierarchies. It effectively
-                        identifies unique price types and determines which levels or accounts are associated with each
-                        price type, enhancing pricing transparency and decision-making processes for stakeholders.</p>
-                </div>
-                <div class="project-item">
-                    <h3>CSR to Cash app, Common Shipping, Agility Reports, FedEx Corp, USA</h3>
-                    <p>Amalgamated 8 applications to offer a holistic view of shipping details within customer
-                        hierarchies, facilitating comprehensive analysis and data visualization for all business users.
-                        Through this initiative, I enhanced the understanding of shipment distribution and movement
-                        across different hierarchy levels within FedEx.</p>
-                </div>
-                <div class="project-item">
-                    <h3>KYCIC, KYC Intelligent Compliance Limited, Hong Kong</h3>
-                    <p>Spearheaded the development of a real-time, user-friendly KYC search solution for small to
-                        medium-sized entities, integrating data from a comprehensive worldwide risk intelligence
-                        database and implementing a keyword-focused internet search to capture recent, time-sensitive
-                        information. Engineered a robust system leveraging AWS Cloud Storage for secure data retention
-                        and retrieval, ensuring outstanding data security while providing seamless access to critical
-                        compliance information for clients in the financial sector.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="research">
-            <div class="container">
-                <h2><i class="fa-solid fa-book"></i> My Research Works</h2>
-                <div class="bento-grid">
-                    <div class="bento-item">
-                        <h3>Advanced Machine Learning Techniques for Sports Team Composition</h3>
-                        <p>A groundbreaking approach to sports analytics using advanced data science techniques to revolutionize team management and performance optimization through sophisticated machine learning models.</p>
-                        <a href="Research\Research-overview_Niranjan.html" target="_blank" class="know-more">Know More</a>
-                    </div>
-                
-                    <div class="bento-item">
-                        <h3>Davis-summary-vac: Python Package for Data Summarization</h3>
-                        <p>A Python package that simplifies data summarization tasks, enabling users to efficiently analyse and extract insights from datasets, enhancing productivity in data-driven projects.</p>
-                        <a href="https://pypi.org/project/davis-summary-vac/" target="_blank" class="know-more">Know More</a>
-                    </div>
-                
-                    <div class="bento-item">
-                        <h3>Transforming Business Improvement Districts</h3>
-                        <p>A transformative approach for BIDs to revolutionise support for levy payers through strategic technological integration, creating dynamic, responsive business environments.</p>
-                        <a href="Research/BIDs by Niranjan.html" target="_blank" class="know-more">Know More</a>
-                    </div>
-                    
-                    <div class="bento-item">
-                        <h3>BondCoin: Centralized Digital Currency for International Trade</h3>
-                        <p>An innovative centralized digital currency designed to streamline international trade payments, eliminating currency conversion and ensuring faster, more secure transactions.</p>
-                        <a href="Research/BondCoin_ A Centralized Digital Currency for Seamless International Trade Payments.html" target="_blank" class="know-more">Know More</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="contact">
-            <div class="container">
-                <h2>Although I am not frequently active on social media, I would be pleased to assist you. Kindly feel free to contact me by phone or email at your convenience.</h2>
-                <h2><i class="fas fa-envelope"></i> Contact</h2>
-                <p><i class="fas fa-envelope"></i> Email: niranjangopalan948@gmail.com</p>
-                <p><i class="fas fa-phone"></i> Phone: +44 7393067325</p>
-                <p><i class="fas fa-map-marker-alt"></i> Location: United Kingdom</p>
-                <p><i class="fas fa-globe"></i> Website: <a href="https://niranjangopalan.github.io/"
-                        target="_blank">https://niranjangopalan.github.io/</a></p>
-            </div>
-        </section>
-    </main>
-   
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Niranjan Gopalan. All rights reserved.</p>
-            <div class="social-icons">
-                <a href="https://github.com/NIRANJANGOPALAN" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.kaggle.com/niranjan42" target="_blank"><i class="fab fa-kaggle"></i></a>
-                <a href="https://medium.com/@niranjangopalan948" target="_blank"><i class="fab fa-medium"></i></a>
             </div>
         </div>
+    </section>
+
+    <section id="work" class="section">
+        <h2>Work Experience</h2>
+        <div class="timeline">
+            <!-- Soho Road BID -->
+            <div class="timeline-item">
+                <div class="timeline-dot">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Technical Analyst</h3>
+                    <h4>Soho Road BID, Birmingham, UK</h4>
+                    <p class="job-duration">Dec 2023 - Apr 2025</p>
+                    <ul>
+                        <li>Led the analysis of visitor demographics, spending behaviours, and satisfaction metrics,
+                            translated complex data into technical requirements to support the design of digital
+                            solutions and inform strategic business decisions.</li>
+                        <li>Facilitated requirements gathering sessions with stakeholders, and documented business and
+                            functional requirements (BRD, FRD) to ensure alignment between business needs and technical
+                            solutions.</li>
+                        <li>Developed and implemented data-driven strategies that addressed operational inefficiencies,
+                            resulting in improved processes and enhanced decision-making.</li>
+                        <li>Provided actionable insights from comprehensive data analysis, which directly contributed to
+                            the organization securing £5 million in funding to support future initiatives.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Atos -->
+            <div class="timeline-item">
+                <div class="timeline-dot">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Full Stack Developer</h3>
+                    <h4>Atos, FedEx Corp, USA</h4>
+                    <p class="job-duration">Mar 2021 - Aug 2023</p>
+
+                    <h5>Project: Customer Pricing Map</h5>
+                    <ul>
+                        <li>Developed the Customer Pricing Map (CPM) application, providing comprehensive insights into
+                            shipping details and product discounts to support critical decision-making for stakeholders.
+                        </li>
+                        <li>Built full-stack SaaS applications using React for the front-end and RESTful APIs with Java
+                            microservices for the back end, integrating dynamic visualizations with D3.js in a
+                            component-based architecture to deliver actionable insights.</li>
+                        <li>Used Jest for unit testing React components to ensure reliability and maintainability of the
+                            application.</li>
+                    </ul>
+
+                    <h5>Project: Common Shipping, Agility Reports</h5>
+                    <ul>
+                        <li>Worked on restructuring the application, which made the overall system architecture cleaner
+                            and improved both its performance and maintainability.</li>
+                        <li>Contributed to data migration efforts for the Common Shipping project, supporting accurate
+                            and efficient transfer of shipping history and related data between systems while ensuring
+                            data integrity and built robust ETL and data migration pipelines, transferring large
+                            datasets from on-premises to Oracle Cloud, enabling a $30M cost reduction within 6 months.
+                        </li>
+                        <li>Diagnosed and resolved complex application issues, driving defect resolution and ensuring
+                            smooth UAT and production releases through cross-functional collaboration.</li>
+                        <li>Used Jenkins to set up CI/CD pipelines that automated the build, testing, and deployment
+                            process, making releases faster and more reliable.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <!-- Bento Grid for Main Categories -->
+            <div class="category-grid">
+                <div class="category-item" id="data-analytics">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Data Analytics and Machine Learning</h3>
+                </div>
+                <div class="category-item" id="programming">
+                    <i class="fas fa-code"></i>
+                    <h3>Programming & Development</h3>
+                </div>
+                <div class="category-item" id="database">
+                    <i class="fas fa-database"></i>
+                    <h3>Big data, Database and Cloud Platforms</h3>
+                </div>
+                <div class="category-item" id="bi-tools">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Business Intelligence & Visualization Tools</h3>
+                </div>
+                <div class="category-item" id="project-mgmt">
+                    <i class="fas fa-tasks"></i>
+                    <h3>Project Management & Methodologies</h3>
+                </div>
+            </div>
+
+            <!-- Skills for each category -->
+            <div class="skill-category" data-category="data-analytics">
+                <div class="skill-grid">
+                    <div class="skill-item">Data Analysis</div>
+                    <div class="skill-item">Business Analytics</div>
+                    <div class="skill-item">Data Visualization</div>
+                    <div class="skill-item">Statistical Modeling</div>
+                    <div class="skill-item">Data Wrangling</div>
+                    <div class="skill-item">Data Preprocessing</div>
+                    <div class="skill-item">Feature Engineering</div>
+                    <div class="skill-item">Exploratory Data Analysis</div>
+                    <div class="skill-item">Predictive Modelling</div>
+                    <div class="skill-item">Regression Analysis</div>
+                    <div class="skill-item">Time Series Analysis</div>
+                    <div class="skill-item">Clustering</div>
+                </div>
+            </div>
+
+            <div class="skill-category" data-category="programming">
+                <div class="skill-grid">
+                    <div class="skill-item">Full-Stack Development</div>
+                    <div class="skill-item">UI</div>
+                    <div class="skill-item">JavaScript</div>
+                    <div class="skill-item">React.js</div>
+                    <div class="skill-item">Material UI</div>
+                    <div class="skill-item">Node.js</div>
+                    <div class="skill-item">Next.js</div>
+                    <div class="skill-item">Python</div>
+                    <div class="skill-item">Flask</div>
+                    <div class="skill-item">REST API</div>
+                    <div class="skill-item">GIT</div>
+                    <div class="skill-item">CI/CD</div>
+                    <div class="skill-item">Jenkins</div>
+                    <div class="skill-item">Docker</div>
+                    <div class="skill-item">Microservices</div>
+                </div>
+            </div>
+
+            <div class="skill-category" data-category="database">
+                <div class="skill-grid">
+                    <div class="skill-item">SQL</div>
+                    <div class="skill-item">Apache Spark</div>
+                    <div class="skill-item">Oracle Database</div>
+                    <div class="skill-item">PostgreSQL</div>
+                    <div class="skill-item">AWS S3</div>
+                    <div class="skill-item">Cloudflare R2</div>
+                    <div class="skill-item">AstraDB</div>
+                    <div class="skill-item">ETL</div>
+                </div>
+            </div>
+
+            <div class="skill-category" data-category="bi-tools">
+                <div class="skill-grid">
+                    <div class="skill-item">Power BI</div>
+                    <div class="skill-item">IBM SPSS</div>
+                    <div class="skill-item">Looker</div>
+                </div>
+            </div>
+
+            <div class="skill-category" data-category="project-mgmt">
+                <div class="skill-grid">
+                    <div class="skill-item">Agile Methodologies</div>
+                    <div class="skill-item">SDLC</div>
+                    <div class="skill-item">Stakeholder Management</div>
+                    <div class="skill-item">Data-Driven Decision Making</div>
+                    <div class="skill-item">UAT</div>
+                    <div class="skill-item">Jira</div>
+                    <div class="skill-item">Digital ai</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="research" class="section">
+        <h2>Research</h2>
+        <div class="research-container">
+            <div class="research-item">
+                <h3>Advanced Machine Learning Techniques for Sports Team Composition</h3>
+                <p>A groundbreaking approach to sports analytics using advanced data science techniques to revolutionize team management and performance optimization through sophisticated machine learning models.</p>
+                <a href="./Research/Research-overview_Niranjan.html" class="know-more-btn">Know More</a>
+            </div>
+            
+            <div class="research-item">
+                <h3>Davis-summary-vac: Python Package for Data Summarization</h3>
+                <p>A Python package that simplifies data summarization tasks, enabling users to efficiently analyse and extract insights from datasets, enhancing productivity in data-driven projects.</p>
+                <a href="https://pypi.org/project/davis-summary-vac/" class="know-more-btn">Know More</a>
+            </div>
+            
+            <div class="research-item">
+                <h3>Transforming Business Improvement Districts</h3>
+                <p>A transformative approach for BIDs to revolutionise support for levy payers through strategic technological integration, creating dynamic, responsive business environments.</p>
+                <a href="./Research/BIDs by Niranjan.html" class="know-more-btn">Know More</a>
+            </div>
+            
+            <div class="research-item">
+                <h3>BondCoin: Centralized Digital Currency for International Trade</h3>
+                <p>An innovative centralized digital currency designed to streamline international trade payments, eliminating currency conversion and ensuring faster, more secure transactions.</p>
+                <a href="./Research/BondCoin_ A Centralized Digital Currency for Seamless International Trade Payments.html" class="know-more-btn">Know More</a>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p class="contact-intro">Although I am not frequently active on social media, I would be pleased to assist you. Kindly feel free to contact me by phone or email at your convenience.</p>
+        
+        <div class="contact-simple">
+            <div class="contact-method">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p><a href="mailto:niranjangopalan948@gmail.com">niranjangopalan948@gmail.com</a></p>
+            </div>
+            
+            <div class="contact-method">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Phone</h3>
+                <p><a href="tel:+447393067325">+44 7393067325</a></p>
+            </div>
+            
+            <div class="contact-method">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Location</h3>
+                <p>United Kingdom</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2025 - Niranjan Gopalan <span id="current-year"></span></p>
     </footer>
 
     <script src="script.js"></script>

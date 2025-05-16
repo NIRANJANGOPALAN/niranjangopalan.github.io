@@ -1,82 +1,58 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const nameElement = document.getElementById('name');
-    const rolesElement = document.getElementById('roles');
-    const name = 'Niranjan Gopalan';
-    const roles = ['Software Engineer', 'Consultant', 'Data Analyst', 'Full-Stack Developer'];
-
-    // Typing effect for name
-    let i = 0;
-    const typeWriter = () => {
-        if (i < name.length) {
-            nameElement.innerHTML += name.charAt(i);
-            i++;
-            setTimeout(typeWriter, 100);
-        } else {
-            setTimeout(typeRoles, 1000);
-        }
-    };
-
-    // Typing effect for roles
-    let j = 0;
-    let currentRole = 0;
-    const typeRoles = () => {
-        if (j < roles[currentRole].length) {
-            rolesElement.innerHTML += roles[currentRole].charAt(j);
-            j++;
-            setTimeout(typeRoles, 100);
-        } else {
-            setTimeout(() => {
-                eraseRole();
-            }, 1000);
-        }
-    };
-
-    const eraseRole = () => {
-        if (rolesElement.innerHTML.length > 0) {
-            rolesElement.innerHTML = rolesElement.innerHTML.slice(0, -1);
-            setTimeout(eraseRole, 50);
-        } else {
-            currentRole = (currentRole + 1) % roles.length;
-            j = 0;
-            setTimeout(typeRoles, 500);
-        }
-    };
-
-    typeWriter();
-
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle functionality
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+    }
+    
+    // Close menu when a link is clicked
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navMenu.classList.remove('active');
+            menuToggle.classList.remove('active');
         });
     });
-
-    // Mobile menu toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('nav');
-
-    menuToggle.addEventListener('click', () => {
-        nav.classList.toggle('active');
-        menuToggle.classList.toggle('active');
-    });
 });
+
+// Skills section category interaction
 document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('nav');
-    const menuItems = document.querySelectorAll('nav ul li a'); // Select all menu items
-
-    // Toggle the navigation menu when the menu toggle button is clicked
-    menuToggle.addEventListener('click', function() {
-        nav.classList.toggle('active');
-    });
-
-    // Close the menu when a menu item is clicked
-    menuItems.forEach(item => {
+    // Show the first category by default
+    const firstCategory = document.querySelector('.category-item');
+    const firstSkillCategory = document.querySelector('.skill-category');
+    
+    if (firstCategory && firstSkillCategory) {
+        firstCategory.classList.add('active');
+        firstSkillCategory.classList.add('active');
+    }
+    
+    // Add click event to all category items
+    const categoryItems = document.querySelectorAll('.category-item');
+    categoryItems.forEach(item => {
         item.addEventListener('click', function() {
-            nav.classList.remove('active'); // Remove the active class to hide the menu
+            // Remove active class from all categories
+            categoryItems.forEach(cat => cat.classList.remove('active'));
+            
+            // Add active class to clicked category
+            this.classList.add('active');
+            
+            // Get the category ID
+            const categoryId = this.id;
+            
+            // Hide all skill categories
+            const skillCategories = document.querySelectorAll('.skill-category');
+            skillCategories.forEach(cat => cat.classList.remove('active'));
+            
+            // Show the corresponding skill category
+            const targetCategory = document.querySelector(`.skill-category[data-category="${categoryId}"]`);
+            if (targetCategory) {
+                targetCategory.classList.add('active');
+            }
         });
     });
 });
