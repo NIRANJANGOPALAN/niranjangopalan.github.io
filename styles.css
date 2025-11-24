@@ -183,6 +183,7 @@ body {
 }
 #education {
     background-color: #22035c;
+    color: rgb(240, 239, 245);
     padding: 100px 20px 40px;
 
 }
@@ -220,7 +221,7 @@ body {
 
 .education-icon i {
     font-size: 2.5rem;
-    color: rgb(82, 18, 18);
+    color: rgb(17, 17, 17);
     margin-bottom: 15px;
 }
 
@@ -241,7 +242,7 @@ body {
 
 .education-item h3 {
     margin-bottom: 10px;
-    color: rgb(82, 18, 18);
+    color: rgb(0, 0, 0);
     font-size: 1.4rem;
 }
 
@@ -249,16 +250,16 @@ body {
     font-weight: 500;
     margin-bottom: 8px;
     font-size: 1.1rem;
-    color: #333;
+    color: #000000;
 }
 
 .institution i, .duration i {
     margin-right: 8px;
-    color: rgb(82, 18, 18);
+    color: rgb(14, 14, 14);
 }
 
 .duration {
-    color: #666;
+    color: #030303;
     font-style: italic;
 }
 
